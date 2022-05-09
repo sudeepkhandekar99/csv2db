@@ -50,7 +50,7 @@ public class BatchConfig {
         DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
         lineTokenizer.setNames(new String[]{"timestamp", "ver", "product_family", "country", "device_type", "os", "checkout_failure_count", "payment_api_failure_count", "purchase_count", "revenue"});
         lineTokenizer.setIncludedFields(new int[]{0, 1, 2 , 3, 4, 5 ,6 ,7, 8, 9});
-        BeanWrapperFieldSetMapper<User> fieldSetMapper = new BeanWrapperFieldSetMapper<User>()
+        BeanWrapperFieldSetMapper<User> fieldSetMapper = new BeanWrapperFieldSetMapper<User>();
         fieldSetMapper.setTargetType(User.class);
         lineMapper.setLineTokenizer(lineTokenizer);
         lineMapper.setFieldSetMapper(fieldSetMapper);
